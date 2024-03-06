@@ -44,14 +44,31 @@ function App() {
     console.log("Mobile Phone:", input3);
   }
 
+  function funcShow() {
+    var input1 = document.getElementById("id1").value;
+    var input2 = document.getElementById("id2").value;
+    var input3 = document.getElementById("id3").value;
+    var input4 = document.getElementById("text-for-user-data1");
+    var input5 = document.getElementById("text-for-user-data2");
+    var input6 = document.getElementById("text-for-user-data3");
+    input4.innerHTML = input1;
+    input5.innerHTML = input2;
+    input6.innerHTML = input3;
+  }
+
   return (
     <>
     <form>
         <input id="id1" type="text" placeholder="First Name"/>
         <input id="id2" type="text" placeholder="Last Name" />
         <input id="id3" type="number" placeholder="Mobile Phone" />
-        <input id="id4" type="button" value="Send it!" onClick={funcForm}/>
+        <input id="id4" type="button" value="Send it!" onClick={funcForm} />
+        <input id="id4" type="button" value="Show it!" onClick={funcShow}/>
       </form>
+
+      <p id="text-for-user-data1"></p>
+      <p id="text-for-user-data2"></p>
+      <p id="text-for-user-data3"></p>
       <h1>It's React Header</h1>
       <p>Hjkdskl vjkdlsghv opfkj dtsnmbz. Hjkdskl vjkdlsghv opfkj dtsnmbz. Hjkdskl vjkdlsghv opfkj dtsnmbz.</p>
       <img src={image} alt={'mounteens'} width={400} />
