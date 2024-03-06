@@ -1,9 +1,18 @@
 import React from "react";
 import './App.css';
+import Parent from "./components/Parent";
 import image from "../src/img/karpathy.jpg";
 
 function App() {
 
+  let user = {
+    name: "John",
+    surname: "Smith"
+  }
+
+  let x = 1;
+
+  let y = [1, 2, 3, 4, 5];
   // const students = [
   //   { name: "John", surname: "Smith", phone: "0675483190" },
   //   { name: "Jack", surname: "Black", phone: "0675488190" },
@@ -58,6 +67,7 @@ function App() {
 
   return (
     <>
+      <Parent data={user} forX={x} forY={y}/>
     <form>
         <input id="id1" type="text" placeholder="First Name"/>
         <input id="id2" type="text" placeholder="Last Name" />
