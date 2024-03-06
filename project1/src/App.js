@@ -27,18 +27,31 @@ function App() {
 
   // let x = 0;
   
-  // function funcForm() {
-  //   console.log(this.value)
-  // }
-
-  // funcForm();
-
   const elem1 = React.createElement('h1', {}, "It's React Header");
   const elem2 = React.createElement('p', {}, "Hjkdskl vjkdlsghv opfkj dtsnmbz. Hjkdskl vjkdlsghv opfkj dtsnmbz. Hjkdskl vjkdlsghv opfkj dtsnmbz.");
   const elem3 = React.createElement('img', { src: image, alt: "mounteens", width: 400});
 
+  
+
+
+  function funcForm() {
+    var input1 = document.getElementById("id1").value;
+    var input2 = document.getElementById("id2").value;
+    var input3 = document.getElementById("id3").value;
+    
+    console.log("First Name:", input1);
+    console.log("Last Name:", input2);
+    console.log("Mobile Phone:", input3);
+  }
+
   return (
     <>
+    <form>
+        <input id="id1" type="text" placeholder="First Name"/>
+        <input id="id2" type="text" placeholder="Last Name" />
+        <input id="id3" type="number" placeholder="Mobile Phone" />
+        <input id="id4" type="button" value="Send it!" onClick={funcForm}/>
+      </form>
       <h1>It's React Header</h1>
       <p>Hjkdskl vjkdlsghv opfkj dtsnmbz. Hjkdskl vjkdlsghv opfkj dtsnmbz. Hjkdskl vjkdlsghv opfkj dtsnmbz.</p>
       <img src={image} alt={'mounteens'} width={400} />
@@ -46,14 +59,7 @@ function App() {
       {elem2}
       {elem3}
       {/* <button onClick={funcForm}>Form</button> */}
-      <form action="">
-        <label htmlFor="html">HTML</label>
-        <br />
-        <input type="text" value="First Name" />
-        <input type="text" value="Last Name" />
-        <input type="number" value="Mobile phone"/>
-        <input type="submit" value="Submit"/>
-      </form>
+      
       {/* <p style={myStyle}>Lorem gjskg ajruioewthwn iwopirqghvj newoiqjvwqphbvpivahivheuiap. Lorem gjskg ajruioewthwn iwopirqghvj newoiqjvwqphbvpivahivheuiap. Lorem gjskg ajruioewthwn iwopirqghvj newoiqjvwqphbvpivahivheuiap.
       </p>
       <p className={styles}>Lorem gjskg ajruioewthwn iwopirqghvj newoiqjvwqphbvpivahivheuiap. Lorem gjskg ajruioewthwn iwopirqghvj newoiqjvwqphbvpivahivheuiap. Lorem gjskg ajruioewthwn iwopirqghvj newoiqjvwqphbvpivahivheuiap.
